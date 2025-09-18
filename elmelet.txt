@@ -1,0 +1,24 @@
+A szövegek (string) a c#-ban listaként vannak kezelve
+
+// SZÖVEG KEZELÉSE TÖMBKÉNT ÉS MÁS MÓDOKON 
+#region A szöveg mint tömb
+
+// A STRING KEZELÉSE MINT LISTA
+//string szo  = "szo";                // STRING LÉTREHOZÁSA
+//Console.WriteLine(szo[1]);          // STRING MÁSODIK INDEXÛ ELEMÉNEK KIÍRÁSA
+
+// BETÛ KICSERÉLÉSE
+// szo[1] = "i";                    // ILYET - TEHÁT MEGVÁLTOZTATNI - NEM LEHET CSAK OLVASNI
+
+            
+// ÁTALAKÍTÁS SZÖVEGFÜGGVÉNYEKKEL
+//szo.FÜGGVÉNY ÉS ANNAK MEGFELELÕ HASZNÁLATA
+
+#endregion
+
+Random.Next() a függvény, ami a véletlenszámot generál
+
+3 használata van   
+- paraméter nélkül bármilyen nem negatív int ípusú egész kijöhet
+- egy paraméter esetén az adott számtól kisebb nem negatív int jöhet ki
+- két paraméter esetén az alsó értéktõl nagyobb egyenlõ a felsõ értéktõl kisebb int jöhet
