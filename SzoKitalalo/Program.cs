@@ -20,6 +20,7 @@ namespace SzoKitalalo
             string[] helyesLista;
             string tipp = "";
             bool benneVan = false;
+            int eletero = 10;
 
             // MEGJELENÍTÉSRE HASZNÁLHATÓ LISTA LÉTREHOZÁSA ÉS A HELYES KARAKTEREKET SORRENDBEN TARTALMAZÓ LISTA
             szo = szavak[rnd.Next(szavak.Length)];
@@ -31,12 +32,11 @@ namespace SzoKitalalo
             // EREDMÉNY LISTA FELTÖLTÉSE _ KARAKTEREKKEL ( KEZDETI ÁLLAPOTHOZ )
             EredListaFeltoltes(szoHossz, eredLista);
 
-
             // A HELYES SZÓ KARAKTEREIT TARTALMAZÓ LISTA FELTÖLTÉSE
             HelyesListaFeltoltes(szo, szoHossz, helyesLista);
 
             // KEZDETI MEGJELENÍTÉS
-            Megjelenit(eredLista, "Kezdheti a játékot!");
+            Megjelenit(eredLista, "Kezdheti a játékot!", eletero);
 
 
             // FŐCIKLUS, ADDIG MEGY AMÍGY A JÁTÉKOS TIPPJEIT TARTALMAZÓ LISTA NEM EGYEZIK MEG A SZÓVAL
@@ -48,7 +48,7 @@ namespace SzoKitalalo
 
                 if (tipp == "")
                 {
-                    Megjelenit(eredLista, "Kérem adjon meg egy karaktert!");
+                    Megjelenit(eredLista, "Kérem adjon meg egy karaktert!", eletero);
                 }
                 else
                 {
@@ -58,7 +58,7 @@ namespace SzoKitalalo
 
 
                     // ANNAK MEGFELELŐEN JÁRUNK EL HOGY A TIPP BENNE VAN-E A SZÓBAN
-                    if (benneVan)
+                    if (benneVan) // HA BENNE VAN
                     {
                         foreach (var i in indexek)
                         {
@@ -66,20 +66,39 @@ namespace SzoKitalalo
                             eredLista[i] = tipp;
                         }
 
-                        // AMENNYIBEN BENNE VAN ENNEK MEGFELELŐ MEGJELENÍTÉS
-                        Megjelenit(eredLista, "Benne van!");
+                        // EDDIGI EREDMÉNY MEGJELENÍTÉSE BENNE VAN SZÖVEGGEL
+                        Megjelenit(eredLista, "Benne van!", eletero);
+
                     }
-                    else
+                    else // HA NINCS BENNE
                     {
-                        // AMENNYIBEN NINCS BENNE ENNEK MEGFELELŐ MEGJELENÍTÉS
-                        Megjelenit(eredLista, "Nincs benne !");
+                        // ÉLETERŐ CSÖKKENTÉSE
+                        eletero--;
+
+                        // EDDIGI EREDMÉNY MEGJELENÍTÉSE NINCS BENNE SZÖVEGGEL
+                        Megjelenit(eredLista, "Nincs benne !", eletero);
+
                     }
                 }
 
-            } while (string.Join("", eredLista) != szo);
+            } while (string.Join("", eredLista) != szo && eletero != 0);           
 
-        }
+            // FŐ LOOPBÓL VALÓ KILÉPÉS VIZSGÁLATA
+            if (string.Join("", eredLista) == szo) // HA ELTALÁLTA A SZÓ
+            {
+                Console.WriteLine("\negnyerte a játékot!");
+            }
+            else // HA NEM TALÁLTA EL A SZÓT
+            {
+                Console.WriteLine("\nElvesztette a játékot mivel elfogyott az életereje!");
+            }
 
+            
+        }    
+
+
+
+        // A HELYES MEGOLDÁST TARTALMAZÓ LISTA FELTÖLTÉSÉRE HASZNÁLHATÓ
         private static void HelyesListaFeltoltes(string szo, int szoHossz, string[] helyesLista)
         {
             for (int i = 0; i < szoHossz; i++)
@@ -88,6 +107,8 @@ namespace SzoKitalalo
             }
         }
 
+
+        // A FELHASZNÁLÓ EREDMÉNYÉT TARTALMAZÓ LISTA FELTÖLTÉSÉRE HASZNÁLHATÓ
         private static void EredListaFeltoltes(int szoHossz, string[] eredLista)
         {
             for (int i = 0; i < szoHossz; i++)
@@ -96,6 +117,8 @@ namespace SzoKitalalo
             }
         }
 
+
+        // ELLENŐRZI, BENNE VAN-E A FELHASZNÁLÓ TIPPJE, HA IGEN VISSZAADJA HOGY IGEN ÉS AZ ELŐFORDULÁS INDEXEIT
         private static void BenneVanE(string szo, string[] helyesLista, string tipp, out bool benneVan, out int[] indexek)
         {
             int index = 0;
@@ -116,8 +139,9 @@ namespace SzoKitalalo
             }
         }
 
+
         // AZON LISTA MEGJELENÍTÉSE AMELYET A MEGJELENÍTŐ FELÜLET HASZNÁL TEHÁT eredLista MEGJELENÍTÉSE
-        static void Megjelenit(string[] eredLista, string uzenet) 
+        static void Megjelenit(string[] eredLista, string uzenet, int eletero) 
         {
             // KONZOL LETISZÍTÁSA
             Console.Clear();
@@ -129,7 +153,11 @@ namespace SzoKitalalo
             }
 
             // ELTALÁLTA / NEM TALÁLTA EL ÜZENET KIÍRÁSA
-            Console.WriteLine("\n" + uzenet);
+            Console.WriteLine("\n\n" + uzenet + "\n");
+
+            // ÉLETERŐ KIÍRÁSA
+            Console.WriteLine("életerő: " + eletero);
+
         }
     }
 }
