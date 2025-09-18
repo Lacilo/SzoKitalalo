@@ -43,7 +43,7 @@ namespace SzoKitalalo
             do
             {
                 // A FELHASZNÁLÓ TIPPJÉNEK BEKÉRÉSE
-                Console.Write("\nAdja meg a tippjét \\-$ ");
+                Console.Write("\n\nAdja meg a tippjét \\-$ ");
                 tipp = Console.ReadLine().ToString();
 
                 if (tipp == "")
@@ -156,8 +156,29 @@ namespace SzoKitalalo
             Console.WriteLine("\n\n" + uzenet + "\n");
 
             // ÉLETERŐ KIÍRÁSA
-            Console.WriteLine("életerő: " + eletero);
+            Console.Write("Eleterő: ");
 
+            for (int i = 0; i < eletero; i++) 
+            {
+                if (eletero > 7) 
+                { 
+                    Console.ForegroundColor = ConsoleColor.Green;
+
+                }else if(eletero < 4)
+                {
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                }
+                else
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                }
+
+                    Console.Write("#");
+
+                
+            }
+
+            Console.ForegroundColor = ConsoleColor.White;
         }
     }
 }
