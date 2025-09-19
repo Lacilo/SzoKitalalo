@@ -200,7 +200,7 @@ namespace SzoKitalalo
         {
             // POZÍCIÓKAT ÉS A HOZZÁJUK TARTOZÓ KARAKTEREK LISTÁJÁNAK INICIALIZÁLÁSA
             int[,] pozicioLista = { { 33, 8 }, { 35, 2 }, { 36, 2 }, { 35, 1 }, { 44, 2 }, { 44, 3 }, { 44, 4 }, { 44, 5 }, { 43, 6 }, { 45, 6 }, { 43, 4 }, { 45, 4 } };
-            string[] karakterLista = { "------", "||", "||", "_", "|", "O", "|", "^", "´", "`", "-", "-"};
+            string[] karakterLista = { "------", "||", "||", "_", "|", "O", "|", "^", "´", "`", "-", "-" };
 
             for (int i = 12; i > eletero; i--)
             {
