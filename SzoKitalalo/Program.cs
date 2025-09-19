@@ -43,12 +43,13 @@ namespace SzoKitalalo
             do
             {
                 // A FELHASZNÁLÓ TIPPJÉNEK BEKÉRÉSE
+                Console.SetCursorPosition(0, 11);
                 Console.Write("\n\nAdja meg a tippjét \\-$ ");
                 tipp = Console.ReadLine().ToString();
 
-                if (tipp == "")
+                if (tipp == "" && tipp.Length != 1)
                 {
-                    Megjelenit(eredLista, "Kérem adjon meg egy karaktert!", eletero);
+                    Megjelenit(eredLista, "Kérem egy karaktert adjon meg!", eletero);
                 }
                 else
                 {
@@ -86,7 +87,7 @@ namespace SzoKitalalo
             // FŐ LOOPBÓL VALÓ KILÉPÉS VIZSGÁLATA
             if (string.Join("", eredLista) == szo) // HA ELTALÁLTA A SZÓ
             {
-                Console.WriteLine("\negnyerte a játékot!");
+                Console.WriteLine("\nMegnyerte a játékot!");
             }
             else // HA NEM TALÁLTA EL A SZÓT
             {
@@ -94,8 +95,7 @@ namespace SzoKitalalo
             }
 
             
-        }    
-
+        }   
 
 
         // A HELYES MEGOLDÁST TARTALMAZÓ LISTA FELTÖLTÉSÉRE HASZNÁLHATÓ
@@ -145,6 +145,7 @@ namespace SzoKitalalo
         {
             // KONZOL LETISZÍTÁSA
             Console.Clear();
+            Console.SetCursorPosition(0,0);
 
             // FELHASZNÁLÓ EDDIGI EREDMÉNYÉT TARTALMAZÓ LISTA KIÍRÁSA
             foreach (var b in eredLista)
@@ -179,6 +180,43 @@ namespace SzoKitalalo
             }
 
             Console.ForegroundColor = ConsoleColor.White;
+
+            Akasztofa(eletero);
+        }
+
+        static void Akasztofa(int eletero)
+        {
+            int[,] pozicioLista = { { 33, 8 }, { 35, 2 }, { 35, 1 } };
+            string[] karakterLista = { "------", "||", "_" };
+
+            for (int i = 10; i > eletero; i--)
+            {
+                int b = 10 - i;
+                if (b == 1)
+                {
+                    Console.SetCursorPosition(pozicioLista[b, 0], pozicioLista[b, 1]);
+
+                    for (int j = 0; j < 6; j++)
+                    {
+                        Console.SetCursorPosition(pozicioLista[b, 0], pozicioLista[b, 1]+j);
+                        Console.Write(karakterLista[b]);
+                    }
+                    
+                }
+                else if(b == 2)
+                {
+                    for (int j = 0; j < 10; j++)
+                    {
+                        Console.SetCursorPosition(pozicioLista[b, 0] + j, pozicioLista[b, 1]);
+                        Console.Write(karakterLista[b]);
+                    }
+                }
+                else
+                {
+                    Console.SetCursorPosition(pozicioLista[b, 0], pozicioLista[b, 1]);
+                    Console.Write(karakterLista[b]);
+                }                
+            }
         }
     }
 }
