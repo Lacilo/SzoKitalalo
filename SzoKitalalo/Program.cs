@@ -186,8 +186,8 @@ namespace SzoKitalalo
 
         static void Akasztofa(int eletero)
         {
-            int[,] pozicioLista = { { 33, 8 }, { 35, 2 }, { 35, 1 }, { 44, 2 }, { 44, 3 }, { 44, 4 } };
-            string[] karakterLista = { "------", "||", "_", "|", "O", "|" };
+            int[,] pozicioLista = { { 33, 8 }, { 35, 2 }, { 35, 1 }, { 44, 2 }, { 44, 3 }, { 44, 4 }, { 44, 5 } };
+            string[] karakterLista = { "------", "||", "_", "|", "O", "|", "|" };
 
             for (int i = 10; i > eletero; i--)
             {
