@@ -20,7 +20,9 @@ namespace SzoKitalalo
             string[] helyesLista;
             string tipp = "";
             bool benneVan = false;
-            int eletero = 10;
+            int eletero = 12;
+            string rosszBetuk = "";
+            
 
             // MEGJELENÍTÉSRE HASZNÁLHATÓ LISTA LÉTREHOZÁSA ÉS A HELYES KARAKTEREKET SORRENDBEN TARTALMAZÓ LISTA
             szo = szavak[rnd.Next(szavak.Length)];
@@ -36,20 +38,20 @@ namespace SzoKitalalo
             HelyesListaFeltoltes(szo, szoHossz, helyesLista);
 
             // KEZDETI MEGJELENÍTÉS
-            Megjelenit(eredLista, "Kezdheti a játékot!", eletero);
+            Megjelenit(eredLista, "Kezdheti a játékot!", eletero, rosszBetuk);
 
 
             // FŐCIKLUS, ADDIG MEGY AMÍGY A JÁTÉKOS TIPPJEIT TARTALMAZÓ LISTA NEM EGYEZIK MEG A SZÓVAL
             do
             {
                 // A FELHASZNÁLÓ TIPPJÉNEK BEKÉRÉSE
-                Console.SetCursorPosition(0, 11);
-                Console.Write("\n\nAdja meg a tippjét \\-$ ");
+                Console.SetCursorPosition(0, 8);
+                Console.Write("Adja meg a tippjét \\-$ ");
                 tipp = Console.ReadLine().ToString();
 
                 if (tipp == "" && tipp.Length != 1)
                 {
-                    Megjelenit(eredLista, "Kérem egy karaktert adjon meg!", eletero);
+                    Megjelenit(eredLista, "Kérem egy karaktert adjon meg!", eletero, rosszBetuk);
                 }
                 else
                 {
@@ -68,7 +70,7 @@ namespace SzoKitalalo
                         }
 
                         // EDDIGI EREDMÉNY MEGJELENÍTÉSE BENNE VAN SZÖVEGGEL
-                        Megjelenit(eredLista, "Benne van!", eletero);
+                        Megjelenit(eredLista, "Benne van!", eletero, rosszBetuk);
 
                     }
                     else // HA NINCS BENNE
@@ -76,8 +78,11 @@ namespace SzoKitalalo
                         // ÉLETERŐ CSÖKKENTÉSE
                         eletero--;
 
+                        // HIBÁS BETŰKHÖZ HOZZÁADJA A TIPPJÉT
+                        rosszBetuk += $" {tipp}";
+
                         // EDDIGI EREDMÉNY MEGJELENÍTÉSE NINCS BENNE SZÖVEGGEL
-                        Megjelenit(eredLista, "Nincs benne !", eletero);
+                        Megjelenit(eredLista, "Nincs benne !", eletero, rosszBetuk);
 
                     }
                 }
@@ -91,6 +96,7 @@ namespace SzoKitalalo
             }
             else // HA NEM TALÁLTA EL A SZÓT
             {
+                Console.SetCursorPosition(0, 10);
                 Console.WriteLine("\nElvesztette a játékot mivel elfogyott az életereje!");
             }
 
@@ -141,7 +147,7 @@ namespace SzoKitalalo
 
 
         // AZON LISTA MEGJELENÍTÉSE AMELYET A MEGJELENÍTŐ FELÜLET HASZNÁL TEHÁT eredLista MEGJELENÍTÉSE
-        static void Megjelenit(string[] eredLista, string uzenet, int eletero) 
+        static void Megjelenit(string[] eredLista, string uzenet, int eletero, string rosszBetuk) 
         {
             // KONZOL LETISZÍTÁSA
             Console.Clear();
@@ -165,7 +171,7 @@ namespace SzoKitalalo
                 { 
                     Console.ForegroundColor = ConsoleColor.Green;
 
-                }else if(eletero < 4)
+                }else if(eletero > 4)
                 {
                     Console.ForegroundColor = ConsoleColor.Yellow;
                 }
@@ -174,24 +180,27 @@ namespace SzoKitalalo
                     Console.ForegroundColor = ConsoleColor.Red;
                 }
 
-                    Console.Write("#");
-
-                
+                    Console.Write("#");                
             }
 
             Console.ForegroundColor = ConsoleColor.White;
 
             Akasztofa(eletero);
+
+            Console.SetCursorPosition(0, 15);
+            Console.WriteLine($"Hibás betűk: {rosszBetuk}");
         }
 
+        // AKASZTÓFA FIGURA KIRAJZOLÁSA
         static void Akasztofa(int eletero)
         {
-            int[,] pozicioLista = { { 33, 8 }, { 35, 2 }, { 35, 1 }, { 44, 2 }, { 44, 3 }, { 44, 4 }, { 44, 5 } };
-            string[] karakterLista = { "------", "||", "_", "|", "O", "|", "|" };
+            // POZÍCIÓKAT ÉS A HOZZÁJUK TARTOZÓ KARAKTEREK LISTÁJÁNAK INICIALIZÁLÁSA
+            int[,] pozicioLista = { { 33, 8 }, { 35, 2 }, { 36, 2 }, { 35, 1 }, { 44, 2 }, { 44, 3 }, { 44, 4 }, { 44, 5 }, { 43, 6 }, { 45, 6 }, { 43, 4 }, { 45, 4 } };
+            string[] karakterLista = { "------", "||", "||", "_", "|", "O", "|", "^", "´", "`", "-", "-"};
 
-            for (int i = 10; i > eletero; i--)
+            for (int i = 12; i > eletero; i--)
             {
-                int b = 10 - i;
+                int b = 12 - i;
                 if (b == 1)
                 {
                     Console.SetCursorPosition(pozicioLista[b, 0], pozicioLista[b, 1]);
@@ -203,13 +212,18 @@ namespace SzoKitalalo
                     }
                     
                 }
-                else if(b == 2)
+                else if(b == 3)
                 {
                     for (int j = 0; j < 10; j++)
                     {
                         Console.SetCursorPosition(pozicioLista[b, 0] + j, pozicioLista[b, 1]);
                         Console.Write(karakterLista[b]);
                     }
+                }
+                else if(b == 2)
+                {
+                    Console.SetCursorPosition(pozicioLista[b, 0], pozicioLista[b, 1]);
+                    Console.Write(karakterLista[b]);
                 }
                 else
                 {
