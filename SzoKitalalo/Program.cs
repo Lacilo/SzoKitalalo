@@ -49,7 +49,7 @@ namespace SzoKitalalo
                 Console.Write("Adja meg a tippjét \\-$ ");
                 tipp = Console.ReadLine().ToString();
 
-                if (tipp == "" && tipp.Length != 1)
+                if (tipp == "" || tipp.Length != 1)
                 {
                     Megjelenit(eredLista, "Kérem egy karaktert adjon meg!", eletero, rosszBetuk);
                 }
@@ -96,6 +96,10 @@ namespace SzoKitalalo
             }
             else // HA NEM TALÁLTA EL A SZÓT
             {
+                eredLista = helyesLista;
+
+                Megjelenit(eredLista, "", eletero, rosszBetuk);
+
                 Console.SetCursorPosition(0, 10);
                 Console.WriteLine("\nElvesztette a játékot mivel elfogyott az életereje!");
             }
