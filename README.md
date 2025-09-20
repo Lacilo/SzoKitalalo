@@ -46,4 +46,7 @@ Egyszerű életerő kijelző rendszer
 > Ez a függvény a véletlenszerűen kiválaszott szó karaktereiből egy listát készít amivel a program később majd dolgozni fog
 <img width="754" height="178" alt="kép" src="https://github.com/user-attachments/assets/e16b2c5e-51f4-4610-a829-ba44dbdb86af" />
 
-## EredListaFeltoltes
+## EredListaFeltoltes azaz a felhasználó játékhoz használt listájának generálása
+> Ez a függvény generál egy listát amiben a felhasználó tippjei fognak elhelyezkedni és annak az eldöntése érdekében hogy a játékos eltalálta-e a szót ezt a listát fogja segítségül venni, valamint ezt a listát fogja megjeleníteni
+> A listát eleinte _ karakterekkel töltjük meg hogy a betűk helyeit látni lehessen
+<img width="620" height="174" alt="kép" src="https://github.com/user-attachments/assets/ea00efdb-8a22-46a8-b437-7019e51f8e8b" />
