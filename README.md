@@ -29,7 +29,7 @@ Egyszerű életerő kijelző rendszer
 ---
 
 
-# Program működése
+# Program működése ⚙️
 
 <br>
 
@@ -42,3 +42,8 @@ Egyszerű életerő kijelző rendszer
 
 # A program függvényei
 
+## HelyesListaFeltoltes azaz a kitalálandó szóból lista generálás
+> Ez a függvény a véletlenszerűen kiválaszott szó karaktereiből egy listát készít amivel a program később majd dolgozni fog
+<img width="754" height="178" alt="kép" src="https://github.com/user-attachments/assets/e16b2c5e-51f4-4610-a829-ba44dbdb86af" />
+
+## EredListaFeltoltes
