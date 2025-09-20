@@ -12,7 +12,7 @@ namespace SzoKitalalo
         static void Main(string[] args)
         {
             // PROGRAMHOZ SZÜKSÉGES VÁLTOZÓK, LISTÁK INICIALIZÁLÁSA
-            string[] szavak = { "alma", "körte", "medence", "bálna", "béka", "mennyezet" };
+            string[] szavak = { "alma", "körte", "medence", "bálna", "béka", "mennyezet", "ablak", "autó", "babka", "barát", "csiga", "elefánt", "erdő", "fakanál", "halacska", "iskola", "kabát", "kaktusz", "kalap", "karácsony", "kémény", "kert", "kókusz", "lépcső", "medve", "mókus", "nyárfa", "papucs", "párna", "szék", "szekrény", "tenger", "tető", "vízimalom" };
             string szo = "";
             int szoHossz = 0;
             Random rnd = new Random();
@@ -51,10 +51,12 @@ namespace SzoKitalalo
 
                 if (tipp == "" || tipp.Length != 1)
                 {
+                    // HA A JÁTÉKOS NEM ADOTT MEG KARAKTERT VAGY TÖBB KARAKTERBŐL ÁLLÓ SZÖVEGET ADOTT MEG
                     Megjelenit(eredLista, "Kérem egy karaktert adjon meg!", eletero, rosszBetuk);
                 }
                 else if (rosszBetuk.Contains(tipp))
                 {
+                    // HA A MEGADOTT BETŰT A JÁTÉKOS MÁR PRÓBÁLTA
                     Megjelenit(eredLista, "Nincs benne!", eletero, rosszBetuk);
                 }
                 else
@@ -96,7 +98,10 @@ namespace SzoKitalalo
             // FŐ LOOPBÓL VALÓ KILÉPÉS VIZSGÁLATA
             if (string.Join("", eredLista) == szo) // HA ELTALÁLTA A SZÓ
             {
-                Console.WriteLine("\nMegnyerte a játékot!");
+                Console.SetCursorPosition(0, 10);
+                Console.WriteLine($"\nMegnyerte a játékot! A szó {szo} volt. Enterrel kilépés");
+
+                Console.ReadLine();
             }
             else // HA NEM TALÁLTA EL A SZÓT
             {
@@ -105,7 +110,9 @@ namespace SzoKitalalo
                 Megjelenit(eredLista, "", eletero, rosszBetuk);
 
                 Console.SetCursorPosition(0, 10);
-                Console.WriteLine("\nElvesztette a játékot mivel elfogyott az életereje!");
+                Console.WriteLine($"\nElvesztette a játékot mivel elfogyott az életereje! A szó {szo} volt. Enterrel kilépés");
+
+                Console.ReadLine();
             }
 
             
@@ -211,6 +218,7 @@ namespace SzoKitalalo
                 int b = 12 - i;
                 if (b == 1)
                 {
+                    // OSZLOP KIRAJZOLÁSA ELTÉRŐ MÓDON TÖRTÉNIK
                     Console.SetCursorPosition(pozicioLista[b, 0], pozicioLista[b, 1]);
 
                     for (int j = 0; j < 6; j++)
@@ -219,22 +227,19 @@ namespace SzoKitalalo
                         Console.Write(karakterLista[b]);
                     }
                     
-                }
+                }                
                 else if(b == 3)
                 {
+                    // GERENDA KIRAJZOLÁSA
                     for (int j = 0; j < 10; j++)
                     {
                         Console.SetCursorPosition(pozicioLista[b, 0] + j, pozicioLista[b, 1]);
                         Console.Write(karakterLista[b]);
                     }
                 }
-                else if(b == 2)
-                {
-                    Console.SetCursorPosition(pozicioLista[b, 0], pozicioLista[b, 1]);
-                    Console.Write(karakterLista[b]);
-                }
                 else
                 {
+                    // EGYÉB ESETEKBEN (AMIKOR CSAK 1 KARAKTERT KELL KIÍRNI EGYÉRTELMŰ POZÍCIÓRA)
                     Console.SetCursorPosition(pozicioLista[b, 0], pozicioLista[b, 1]);
                     Console.Write(karakterLista[b]);
                 }                
