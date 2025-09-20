@@ -53,6 +53,10 @@ namespace SzoKitalalo
                 {
                     Megjelenit(eredLista, "Kérem egy karaktert adjon meg!", eletero, rosszBetuk);
                 }
+                else if (rosszBetuk.Contains(tipp))
+                {
+                    Megjelenit(eredLista, "Nincs benne!", eletero, rosszBetuk);
+                }
                 else
                 {
                     // ELLENŐZIZZÜK HOGY TARTALMAZZA-E A TIPPET A SZÓ
@@ -82,7 +86,7 @@ namespace SzoKitalalo
                         rosszBetuk += $" {tipp}";
 
                         // EDDIGI EREDMÉNY MEGJELENÍTÉSE NINCS BENNE SZÖVEGGEL
-                        Megjelenit(eredLista, "Nincs benne !", eletero, rosszBetuk);
+                        Megjelenit(eredLista, "Nincs benne!", eletero, rosszBetuk);
 
                     }
                 }
