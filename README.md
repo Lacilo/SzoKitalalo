@@ -32,6 +32,20 @@ Egyszerű életerő kijelző rendszer
 
 ---
 
+## Játék menete
+> A játék lényege hogy kitalálja a szót amelynek a képernyőn betűit jelölik a _ karakterek, és ki kell találnia éppen melyik szóra "gondolt" a gép
+
+> A játékhoz egyszerűen adja meg a tippjét (1 betűt) és nyomjon entert a megadott tipp automatikusan a megfelelő helyre kerül amennyiben benne volt a szóban amennyiben nem, a betűt a program a hibás betűk közé helyezi (ezt majd láthatja, mind a hibás és helyes betűket is és ennek megfelelően folytathatja a játékot)
+
+> ne hagyja üresen a bemeneti mezőt és ne írjon be több karaktert mint 1
+
+> Amennyiben üresen hagyja a bemeneti mezőt (nem ír be semmit és úgy nyom entert) vagy több betűt ír be mint 1 abban az esetben a szoftver figyelmezteti önt a hibáról.
+
+> Amennyiben eltaláta a szót megnyerte a játékot
+
+> Amennyiben nem találta el a szót elveszíette a játékot
+
+> A program ezekről mind értesíti önt, ha nem ismerné a hagyományos akasztófa ábrát abban az esetben egyszerű életerő kijelző rendszer is rendelkezésére áll
 
 # Program működése
 
