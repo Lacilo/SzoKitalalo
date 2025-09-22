@@ -139,7 +139,7 @@ namespace SzoKitalalo
         }
 
 
-        // ELLENŐRZI, BENNE VAN-E A FELHASZNÁLÓ TIPPJE, HA IGEN VISSZAADJA HOGY IGEN ÉS AZ ELŐFORDULÁS INDEXEIT
+        // ELLENŐRZI, BENNE VAN-E A FELHASZNÁLÓ TIPPJE ÉS AZ ELŐFORDULÁSA HELYEIT IS MEGADJA
         private static void BenneVanE(string szo, string[] helyesLista, string tipp, out bool benneVan, out int[] indexek)
         {
             int index = 0;
