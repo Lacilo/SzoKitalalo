@@ -73,7 +73,6 @@ Egyszerű életerő kijelző rendszer
 
 ---
 
-
 <br>
 
 # A program függvényei/eljárásai/kiszervezett programrészei (alprogramjai)
