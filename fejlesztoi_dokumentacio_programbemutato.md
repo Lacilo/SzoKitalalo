@@ -101,5 +101,5 @@
 
 ## Pár kép tesztelésről (egy esetleges felhasználói hiba teszteléséről)
 
-<img width="1148" height="663" alt="kép" src="https://github.com/user-attachments/assets/bf3f78cb-7ceb-47f3-bd82-25e23f71e59f" />
-<img width="1150" height="651" alt="kép" src="https://github.com/user-attachments/assets/e9390b9e-9d36-4ee3-b5b9-2b55f251b829" />
+<img width="1149" height="655" alt="kép" src="https://github.com/user-attachments/assets/19fbcbfb-9283-4021-8aa8-2d86bc928628" />
+<img width="1145" height="657" alt="kép" src="https://github.com/user-attachments/assets/384b13bd-cc81-4dcb-bc25-c5542d8dc31e" />
