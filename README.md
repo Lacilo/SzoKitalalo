@@ -17,6 +17,8 @@
 ## Dizájn
 > Dizájnjában igyekszik a mindenki által ismert akasztófa játék hangulatát előidézni az egyszerű ábrával és eddig tippelt helytelen betűk feljegyzésével
 <img width="1155" height="689" alt="kép" src="https://github.com/user-attachments/assets/02f06438-3e20-4f3e-8ffe-d527d5f92585" />
+<img width="1154" height="677" alt="kép" src="https://github.com/user-attachments/assets/ffbfa29f-007c-44ea-8207-cff4081cca88" />
+
 
 ---
 
@@ -40,7 +42,7 @@ Egyszerű életerő kijelző rendszer
 
 <br>
 
-# A program függvényei
+# A program függvényei/eljárásai/kiszervezett programrészei (alprogramjai)
 
 ## Main - A "Fő program"
 > A Fő programrészben először néhány a programban használt változók inicializálása történik, ezek mellett a lehetséges szavakat tartalmazó lista feltöltése is megtörténik itt
@@ -88,7 +90,7 @@ Egyszerű életerő kijelző rendszer
 ---
 
 ## BenneVanE
-> A függvény ami ellenőrzi hogy a paraméterként megadott string benne van-e a szóban és hogy melyik helyeken található
+> Feladata hogy ellenőrzi hogy a paraméterként megadott string benne van-e a szóban és hogy melyik helyeken található
 <img width="973" height="396" alt="kép" src="https://github.com/user-attachments/assets/351bb33a-be1d-4825-b321-8dd900415223" />
 
 ---
