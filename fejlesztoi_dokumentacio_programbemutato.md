@@ -96,3 +96,10 @@
 > Az eljárásnak egyedül az életerőre van szüksége hogy ki tudja rajzolni a megfelelő akasztófa állapotot
 
 <img width="1381" height="755" alt="kép" src="https://github.com/user-attachments/assets/b004ac50-7a98-46ba-805b-22bdfcc784a0" />
+
+---
+
+## Pár kép tesztelésről (egy esetleges felhasználói hiba teszteléséről)
+
+<img width="1148" height="663" alt="kép" src="https://github.com/user-attachments/assets/bf3f78cb-7ceb-47f3-bd82-25e23f71e59f" />
+<img width="1150" height="651" alt="kép" src="https://github.com/user-attachments/assets/e9390b9e-9d36-4ee3-b5b9-2b55f251b829" />
