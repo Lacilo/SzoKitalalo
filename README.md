@@ -51,7 +51,7 @@ Egyszerű életerő kijelző rendszer
 
 <img width="1437" height="611" alt="kép" src="https://github.com/user-attachments/assets/be9a21e3-a96f-465d-8fe3-485fc7f3f636" />
 
-<br>
+##
 
 > A fő loop bekéri a felhasználótól a tippjét (tehát a betűt amire gondol hogy benne van a szóban)
 
@@ -65,7 +65,7 @@ Egyszerű életerő kijelző rendszer
 
 <img width="682" height="833" alt="kép" src="https://github.com/user-attachments/assets/5dde7e35-eba8-4dd2-b77b-4d1cee17d9d4" />
 
-<br>
+##
 
 > A Főprogramrész vége vizsgálja a fő loopból való kilépés okát Majd az oknak megfelelően jár el (Tájékoztatja a felhasználót hogy elveszette vagy megnyerte a játékot)
 
