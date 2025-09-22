@@ -67,7 +67,6 @@ Egyszerű életerő kijelző rendszer
 
 <img width="993" height="376" alt="kép" src="https://github.com/user-attachments/assets/a72115c8-a459-4418-91a5-ae6fcf87ccca" />
 
-
 ---
 
 ## HelyesListaFeltoltes azaz a kitalálandó szóból lista generálás
