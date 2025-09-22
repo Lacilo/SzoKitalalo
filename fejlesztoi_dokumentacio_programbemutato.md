@@ -3,7 +3,7 @@
 ### ⚠️ FIGYELEM: EZ A PROGRAM CSAKIS TANULMÁNYI CÉLOKBÓL KÉSZÜLT.
 ### ⚠️ ATTENTION: THIS PROGRAM WAS ONLY MADE FOR EDUCATIONAL PURPOSES
 
-### ⚠️ Egyéb figyelmeztetés: Ez egy fejlesztői dokumentáció ami a program "háttérbeli" működését (emellett persze megjelenítés működését is) bemutató dokumentáció
+### ⚠️ Egyéb figyelmeztetés: Ez egy fejlesztői dokumentáció ami a program "háttérbeli" működését (emellett persze megjelenítés működését is) mutatja be/részletezi
 
 <br>
 
