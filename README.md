@@ -53,7 +53,17 @@ Egyszerű életerő kijelző rendszer
 
 ## BenneVanE
 > A függvény ami ellenőrzi hogy a paraméterként megadott string benne van-e a szóban és hogy melyik helyeken található
-<img width="991" height="408" alt="kép" src="https://github.com/user-attachments/assets/94d3af12-bc69-421e-a664-ee00c02ad131" />
+<img width="973" height="396" alt="kép" src="https://github.com/user-attachments/assets/351bb33a-be1d-4825-b321-8dd900415223" />
 
 ## Megjelenites
+> Ez az eljárás felel a felhasználói felület megjelenítéséért a megfelelő paraméterként megadott tájékoztató szöveggel
+<br>
+> Megjeleníti az életerőt és meghívja az Akasztofa eljárást továbbá kijelzi az eddig megadott hibás betűket is
+
 <img width="1429" height="840" alt="kép" src="https://github.com/user-attachments/assets/f1f4521e-f2f9-41db-baad-7f9529c2c7f3" />
+
+
+## Akasztofa
+> Ez az eljárás felel az akasztófa ábra megjelenítéséért, a takarékosság érdekében csak a szükséges szimbólumokat tároljuk el majd azokból a program fogja összeállítani az ábrát
+<br>
+> Az ábra megjelenítése a játékfelület jobb oldalára történik
