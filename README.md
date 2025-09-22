@@ -50,3 +50,7 @@ Egyszerű életerő kijelző rendszer
 > Ez a függvény generál egy listát amiben a felhasználó tippjei fognak elhelyezkedni és annak az eldöntése érdekében hogy a játékos eltalálta-e a szót ezt a listát fogja segítségül venni, valamint ezt a listát fogja megjeleníteni
 > A listát eleinte _ karakterekkel töltjük meg hogy a betűk helyeit látni lehessen
 <img width="620" height="174" alt="kép" src="https://github.com/user-attachments/assets/ea00efdb-8a22-46a8-b437-7019e51f8e8b" />
+
+## BenneVanE
+> A függvény ami ellenőrzi hogy a paraméterként megadott string benne van-e a szóban és hogy melyik helyeken található
+<img width="991" height="408" alt="kép" src="https://github.com/user-attachments/assets/94d3af12-bc69-421e-a664-ee00c02ad131" />
