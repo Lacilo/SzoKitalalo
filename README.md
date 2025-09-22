@@ -57,7 +57,7 @@ Egyszerű életerő kijelző rendszer
 
 ## Megjelenites
 > Ez az eljárás felel a felhasználói felület megjelenítéséért a megfelelő paraméterként megadott tájékoztató szöveggel
-<br>
+
 > Megjeleníti az életerőt és meghívja az Akasztofa eljárást továbbá kijelzi az eddig megadott hibás betűket is
 
 <img width="1429" height="840" alt="kép" src="https://github.com/user-attachments/assets/f1f4521e-f2f9-41db-baad-7f9529c2c7f3" />
@@ -65,5 +65,9 @@ Egyszerű életerő kijelző rendszer
 
 ## Akasztofa
 > Ez az eljárás felel az akasztófa ábra megjelenítéséért, a takarékosság érdekében csak a szükséges szimbólumokat tároljuk el majd azokból a program fogja összeállítani az ábrát
-<br>
+
 > Az ábra megjelenítése a játékfelület jobb oldalára történik
+
+> Ennél az eljárásnál 2 dimenziós lista is alkalmazva lett a szimbólumok pozíciójának tárolására
+
+<img width="1381" height="755" alt="kép" src="https://github.com/user-attachments/assets/b004ac50-7a98-46ba-805b-22bdfcc784a0" />
