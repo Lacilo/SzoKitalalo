@@ -3,6 +3,8 @@
 ### ⚠️ FIGYELEM: EZ A PROGRAM CSAKIS TANULMÁNYI CÉLOKBÓL KÉSZÜLT.
 ### ⚠️ ATTENTION: THIS PROGRAM WAS ONLY MADE FOR EDUCATIONAL PURPOSES
 
+### ⚠️ Egyéb figyelmeztetés: ezen dokumentáció tartalma megegyezeik a README.md fájl tartalmával
+
 <br>
 
 # *Szókitaláló / Akasztófa*
