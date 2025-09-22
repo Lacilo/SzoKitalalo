@@ -54,3 +54,6 @@ Egyszerű életerő kijelző rendszer
 ## BenneVanE
 > A függvény ami ellenőrzi hogy a paraméterként megadott string benne van-e a szóban és hogy melyik helyeken található
 <img width="991" height="408" alt="kép" src="https://github.com/user-attachments/assets/94d3af12-bc69-421e-a664-ee00c02ad131" />
+
+## Megjelenites
+<img width="1429" height="840" alt="kép" src="https://github.com/user-attachments/assets/f1f4521e-f2f9-41db-baad-7f9529c2c7f3" />
