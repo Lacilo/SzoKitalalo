@@ -42,9 +42,7 @@ Egyszerű életerő kijelző rendszer
 
 <br>
 
-# A program függvényei/eljárásai/kiszervezett programrészei (alprogramjai)
-
-## Main - A "Fő program"
+# Main - A "Fő program(rész)"
 > A Fő programrészben először néhány a programban használt változók inicializálása történik, ezek mellett a lehetséges szavakat tartalmazó lista feltöltése is megtörténik itt
 
 > A Fő programrész ezen részében ezek mellett az eredményt tartalmazó lista (EredLista) és a szóból készített "munka" lista (HelyesLista) is feltöltésre kerülnek
@@ -74,6 +72,11 @@ Egyszerű életerő kijelző rendszer
 <img width="993" height="376" alt="kép" src="https://github.com/user-attachments/assets/a72115c8-a459-4418-91a5-ae6fcf87ccca" />
 
 ---
+
+
+<br>
+
+# A program függvényei/eljárásai/kiszervezett programrészei (alprogramjai)
 
 ## HelyesListaFeltoltes azaz a kitalálandó szóból lista generálás
 > Ez a függvény a véletlenszerűen kiválaszott szó karaktereiből egy listát készít amivel a program később majd dolgozni fog
