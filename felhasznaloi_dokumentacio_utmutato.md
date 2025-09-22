@@ -1,4 +1,4 @@
-# DOKUMENTÁCIÓ
+# FELHASZNÁLÓI DOKUMENTÁCIÓ
 
 ### ⚠️ FIGYELEM: EZ A PROGRAM CSAKIS TANULMÁNYI CÉLOKBÓL KÉSZÜLT.
 ### ⚠️ ATTENTION: THIS PROGRAM WAS ONLY MADE FOR EDUCATIONAL PURPOSES
@@ -7,7 +7,7 @@
 
 <br>
 
-# *Szókitaláló / Akasztófa*
+# *Szókitaláló / Akasztófa* - útmutató/felhasználói dokumentáció
 
 <br>
 
